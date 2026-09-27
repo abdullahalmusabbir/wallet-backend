@@ -1209,3 +1209,13 @@ class TransactionDetailView(APIView):
 #             )
 
 #         return Response({"status": "received"})
+
+class HealthView(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        return Response({
+            "success": True,
+            "status": "ok",
+            "message": "Backend is active.",
+        })
