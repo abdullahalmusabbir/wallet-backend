@@ -37,16 +37,6 @@ urlpatterns = [
     path('transactions/history/', views.MyTransactionHistoryView.as_view(), name='my-transactions'),
     path('transactions/company/', views.CompanyTransactionHistoryView.as_view(), name='company-transactions'),
     path('transactions/<uuid:transaction_id>/', views.TransactionDetailView.as_view(), name='transaction-detail'),
-    
-    # Bank Accounts
-    # path('bank-accounts/', views.BankAccountListCreateView.as_view(), name='bank-accounts'),
-    # path('bank-accounts/<int:account_id>/', views.BankAccountDetailView.as_view(), name='bank-account-detail'),
-    
-    # Bank Withdrawal
-    # path('transactions/bank-withdraw/', views.BankWithdrawView.as_view(), name='bank-withdraw'),
-    
-    # Payment Gateway Webhooks
-    # path('webhooks/<str:gateway_name>/', views.payment_gateway_webhook, name='payment-webhook'),
 ]
 
 if settings.DEBUG:

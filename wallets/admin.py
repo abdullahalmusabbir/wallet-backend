@@ -247,23 +247,3 @@ class TransactionAdmin(admin.ModelAdmin):
         taka = obj.balance_after / 100
         return f"৳ {taka:,.2f}"
     balance_after_display.short_description = 'Balance After (Taka)'
-    
-# @admin.register(BankAccount)
-# class BankAccountAdmin(admin.ModelAdmin):
-#     list_display = ['employee', 'bank_name', 'account_number', 'account_title', 'status', 'is_primary', 'created_at']
-#     list_filter = ['status', 'account_type', 'bank_name', 'created_at']
-#     search_fields = ['account_number', 'account_title', 'employee__user__username']
-#     readonly_fields = ['created_at', 'updated_at', 'verified_at']
-
-# @admin.register(ExternalTransaction)
-# class ExternalTransactionAdmin(admin.ModelAdmin):
-#     list_display = ['external_transaction_id', 'transaction', 'bank_account', 'external_status', 'external_amount', 'initiated_at']
-#     list_filter = ['external_status', 'external_currency', 'initiated_at']
-#     search_fields = ['external_transaction_id', 'transaction__transaction_id']
-#     readonly_fields = ['initiated_at', 'completed_at', 'failed_at']
-
-# @admin.register(ReconciliationLog)
-# class ReconciliationLogAdmin(admin.ModelAdmin):
-#     list_display = ['wallet', 'reconciliation_type', 'internal_balance', 'external_balance', 'difference', 'is_resolved', 'created_at']
-#     list_filter = ['reconciliation_type', 'is_resolved', 'created_at']
-#     search_fields = ['wallet__wallet_id', 'employee__user__username']
